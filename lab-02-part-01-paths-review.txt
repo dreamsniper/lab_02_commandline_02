@@ -92,7 +92,7 @@ cd -
 14. How would you show all of the files (including hidden ones) with detailed (long) information that are on you're Desktop if you're in your home directory?  Write your command below.
 ----------
 
-
+ls -l desktop
 
 ==========
 Optional Challenge:
@@ -104,4 +104,4 @@ d. Create another directory in my-stuff that's the same name as your computer.
 e. Determine which folder in my-stuff was created most recently by using ls.  (there are some flags that help with this).
 f. Remove that folder.
 g. Show all of the commands that you used to complete the above exercise.  (for example, how did you determine which folder in my-stuff was the most recent?).  Use the command: history ... to help you remember what you did!  Paste the commands below.
-----------
+------
