@@ -106,7 +106,11 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 Write the command you used below.  Also copy and paste the output below.
 ----------
 
+curl -o google.html www.google.com
 
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12445    0 12445    0     0   111k      0 --:--:-- --:--:-- --:--:--  111k
 
 ==========
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
@@ -114,7 +118,8 @@ Write the command you used below.  Also copy and paste the output below.
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
 
-
+pwd
+/c/Users/thedr
 
 ==========
 12. If you're not in your home directory, change to it (use the shortcut).
@@ -122,7 +127,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
 
-
+cd ~
 
 ==========
 13. So... the lab materials are located at this url:
@@ -138,7 +143,10 @@ Use ls to verify that it downloaded.
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
 
-
+curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   178  100   178    0     0   1133      0 --:--:-- --:--:-- --:--:--  1133
 
 ==========
 14. We learned a command to uncompress a .zip file.  Use it to extract the files and folders from the file you just downloaded.
@@ -146,7 +154,15 @@ Write down the command that you used to download the file below.  Additionally, 
 Write down the command that you used to uncompress the file.
 ----------
 
+unzip mtec1002-lab-02.zip
 
+Archive:  mtec1002-lab-02.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of mtec1002-lab-02.zip or
+        mtec1002-lab-02.zip.zip, and cannot find mtec1002-lab-02.zip.ZIP, period.
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
@@ -164,8 +180,25 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 
 Copy and paste the output below.
 ----------
-
-
+'3D Objects'/             NetHood@
+ AppData/                 NTUSER.DAT
+'Application Data'@       ntuser.dat.LOG1
+ Contacts/                ntuser.dat.LOG2
+ Cookies@                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TM.blf
+'Creative Cloud Files'/   NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000001.regtrans-ms
+ Desktop/                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000002.regtrans-ms
+ Documents/               ntuser.ini
+ Downloads/               OneDrive/
+ Favorites/               Pictures/
+'Google Drive'/           PrintHood@
+ google.html              Recent@
+ Links/                  'Saved Games'/
+'Local Settings'@         Searches/
+ MicrosoftEdgeBackups/    SendTo@
+ mtec1002/               'Start Menu'@
+ mtec1002-lab-02.zip      stuff/
+ Music/                   Templates@
+'My Documents'@           Videos/
 
 ==========
 17. Change into the "stuff" directory that you just created.  Run the following command (we haven't learned this exact command yet, but we will in the next lab!) exactly as described below:
@@ -177,7 +210,7 @@ List the files in the directory you're currently in (which should be stuff).
 Copy and paste the output below.
 ----------
 
-
+hello.txt
 
 ==========
 18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -189,6 +222,26 @@ List the files in the directory you're currently in (which should be home).
 Copy and paste the output below.
 ----------
 
+'3D Objects'/             NTUSER.DAT
+ AppData/                 ntuser.dat.LOG1
+'Application Data'@       ntuser.dat.LOG2
+ Contacts/                NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TM.blf
+ Cookies@                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000001.regtrans-ms
+'Creative Cloud Files'/   NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000002.regtrans-ms
+ Desktop/                 ntuser.ini
+ Documents/               OneDrive/
+ Downloads/               Pictures/
+ Favorites/               PrintHood@
+'Google Drive'/           Recent@
+ google.html             'Saved Games'/
+ Links/                   Searches/
+'Local Settings'@         SendTo@
+ MicrosoftEdgeBackups/   'Start Menu'@
+ mtec1002/                stuff/
+ mtec1002-lab-02.zip      stuff.tar
+ Music/                   Templates@
+'My Documents'@           Videos/
+ NetHood@
 
 
 ==========
@@ -198,6 +251,26 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
+'3D Objects'/             NTUSER.DAT
+ AppData/                 ntuser.dat.LOG1
+'Application Data'@       ntuser.dat.LOG2
+ Contacts/                NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TM.blf
+ Cookies@                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000001.regtrans-ms
+'Creative Cloud Files'/   NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000002.regtrans-ms
+ Desktop/                 ntuser.ini
+ Documents/               OneDrive/
+ Downloads/               Pictures/
+ Favorites/               PrintHood@
+'Google Drive'/           Recent@
+ google.html             'Saved Games'/
+ Links/                   Searches/
+'Local Settings'@         SendTo@
+ MicrosoftEdgeBackups/   'Start Menu'@
+ mtec1002/                stuff/
+ mtec1002-lab-02.zip      stuff.tar
+ Music/                   Templates@
+'My Documents'@           Videos/
+ NetHood@
 
 
 
@@ -207,6 +280,26 @@ Copy and paste the output below.
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
 
+'3D Objects'/             NTUSER.DAT
+ AppData/                 ntuser.dat.LOG1
+'Application Data'@       ntuser.dat.LOG2
+ Contacts/                NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TM.blf
+ Cookies@                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000001.regtrans-ms
+'Creative Cloud Files'/   NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000002.regtrans-ms
+ Desktop/                 ntuser.ini
+ Documents/               OneDrive/
+ Downloads/               Pictures/
+ Favorites/               PrintHood@
+'Google Drive'/           Recent@
+ google.html             'Saved Games'/
+ Links/                   Searches/
+'Local Settings'@         SendTo@
+ MicrosoftEdgeBackups/   'Start Menu'@
+ mtec1002/                stuff/
+ mtec1002-lab-02.zip      stuff.tar
+ Music/                   Templates@
+'My Documents'@           Videos/
+ NetHood@
 
 
 ==========
@@ -217,6 +310,26 @@ gzip stuff.tar
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
 
+'3D Objects'/             NTUSER.DAT
+ AppData/                 ntuser.dat.LOG1
+'Application Data'@       ntuser.dat.LOG2
+ Contacts/                NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TM.blf
+ Cookies@                 NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000001.regtrans-ms
+'Creative Cloud Files'/   NTUSER.DAT{c1e6f87c-74cf-11e8-9fa6-c69ded0846f1}.TMContainer00000000000000000002.regtrans-ms
+ Desktop/                 ntuser.ini
+ Documents/               OneDrive/
+ Downloads/               Pictures/
+ Favorites/               PrintHood@
+'Google Drive'/           Recent@
+ google.html             'Saved Games'/
+ Links/                   Searches/
+'Local Settings'@         SendTo@
+ MicrosoftEdgeBackups/   'Start Menu'@
+ mtec1002/                stuff/
+ mtec1002-lab-02.zip      stuff.tar.gz
+ Music/                   Templates@
+'My Documents'@           Videos/
+ NetHood@
 
 
 ==========
@@ -240,7 +353,7 @@ $ tar -xvf stuff.tar.gz
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
 
-
+dile did not unzip - 
 
 ==========
 24. Go back to your home directory
